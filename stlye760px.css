@@ -104,7 +104,8 @@
             font-family: quicksand;
             max-width: 100vw;
             display: flex;
-            scrollbar-width: none; /* Mögliche Werte: auto, thin, none */           
+            scrollbar-width: none; /* Mögliche Werte: auto, thin, none */ 
+            overflow-x: hidden;          
         }
     
             /* Gesamte Scrollbar */
@@ -244,7 +245,7 @@
             backdrop-filter: blur(20px);
             transition: right 0.8s ease; /* Sanfte Bewegung beim Erscheinen */
             z-index: 9999;
-            padding-top: 20%; /* Abstand zum oberen Rand */
+            padding-top: 28%; /* Abstand zum oberen Rand */
             color: white;
         }
 
@@ -397,12 +398,15 @@
     
     
     
-    
+        .scrollers {
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        }
     
         .flex-scroller {
             display: flex;
             justify-content: center;
-            padding-bottom: 7.5vw;
+            padding-bottom: 2rem;
         }
         
         .scroller {
@@ -486,7 +490,8 @@
             background-color: black;
             display: flex; /* Stellt sicher, dass die Kinder-Elemente in einer Reihe angezeigt werden */
             align-items: center; /* Zentriert die Elemente vertikal, falls erforderlich */
-            padding: 1rem; /* Optional: Fügt etwas Innenabstand hinzu */
+            padding: 1rem;
+            padding-top: 3rem; /* Optional: Fügt etwas Innenabstand hinzu */
         }
         
         .Impressum-text {
@@ -519,7 +524,7 @@
             font-size: 2rem;
             justify-content: center;
             background-color: black;
-            padding: 2rem;
+            padding-bottom: 3rem;
         }
 
         .links i {
