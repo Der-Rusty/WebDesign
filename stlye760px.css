@@ -245,12 +245,7 @@
             border-radius: 5px;
         }
         
-        /*macht keinen sinn*/
-        .links{
-            display: flex;
-            color: white; 
 
-        }
     
     
     
@@ -474,7 +469,7 @@
             background-color: black;
             display: flex; /* Stellt sicher, dass die Kinder-Elemente in einer Reihe angezeigt werden */
             align-items: center; /* Zentriert die Elemente vertikal, falls erforderlich */
-            padding: 15px; /* Optional: Fügt etwas Innenabstand hinzu */
+            padding: 1rem; /* Optional: Fügt etwas Innenabstand hinzu */
         }
         
         .Impressum-text {
@@ -486,6 +481,7 @@
             display: flex;
             text-align: center; /* Macht sicher, dass die Textelemente in der Flexbox ausgerichtet werden */
             align-items: center;
+            flex-wrap: wrap;
         }
         
         #haftung a {
@@ -496,6 +492,21 @@
         #impressum-link a {
             text-decoration: none;
             color: white;
+        }
+
+        /*macht keinen sinn*/
+        .links{
+            display: flex;
+            color: white; 
+            padding: 1rem;
+            font-size: 2rem;
+            justify-content: center;
+            background-color: black;
+            padding: 2rem;
+        }
+
+        .links i {
+            padding: 1rem;
         }
         
         
