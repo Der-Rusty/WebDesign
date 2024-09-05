@@ -334,49 +334,38 @@
     
     
     
-    
-        .parallax_cat2 {
-            background-image: url(Fotos/placeholder.png);
-            
-            height: 100vw;
-            max-width: 100vw;
-    
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
+
     
         #category2 {
-            display: flex;
-            justify-content: space-around; 
-            align-items: center;
+            display: flex; 
+
             margin: 4rem 0.5rem;
         }
         
         .Cat2-Content {
             display: flex;
             width: 100%;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
             flex-shrink: 0;
             margin-top: 2vw;
         }
         
         #left-themes, #right-themes {
             display: flex;
-            flex-direction: column;
             flex-grow: 1;
             flex-shrink: 0;
             justify-content: center;
             align-items: center;
-            gap: 1rem;    
+            gap: 8rem;    
+            margin-bottom: 3rem;
         }
         
         #img-topic1, #img-topic2, #img-topic3, #img-topic4 {
             display: flex;
             flex-grow: 1;
-            max-width: 25vw; /* Beschränke die maximale Breite der Bildcontainer */
-            max-height: 25vw; /* Beschränke die maximale Höhe der Bildcontainer */
+            max-width: 30vw; /* Beschränke die maximale Breite der Bildcontainer */
+            max-height: 30vw; /* Beschränke die maximale Höhe der Bildcontainer */
     
         }
         
@@ -391,11 +380,19 @@
     
         #cat2-text {
             display: flex;
+            flex-grow: 1;
             color: white;
-            align-items: center;
+            text-align: center;
             font-size: 2rem;
         }
+
+        #cat2-text p {
+            text-align: center;
+            padding-bottom: 2rem;
+        }
     
+
+        
     
     
         .scrollers {
