@@ -145,8 +145,8 @@
         .parallax_cat1 {
             background-image: url(Fotos/placeholder.png);
             
-            height: 100vh;
-            max-width: 100vw;
+            height: 100%;
+            max-width: 100%;
     
             background-attachment: fixed;
             background-position: center;
@@ -293,13 +293,13 @@
         .parallax_cat2 {
             background-image: url(Fotos/placeholder.png);
             
-            height: 100vh;
-            max-width: 100vw;
+            height: 100%;
+            max-width: 100%;
     
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size:auto;
         }
     
         #category2 {
