@@ -264,15 +264,14 @@
         
         #imgProfl {
             display: flex;
-            flex-shrink: 0;
-            width: 30rem;
-            height: 30rem;
+            flex-shrink: 1;
+            width: 75wv;
+            height: 75vw;
         }
         
         #imgProfl img {
             max-height: 100%; /* Skaliert das Bild relativ zur Containerhöhe */
             max-width: 100%; /* Skaliert das Bild relativ zur Containerbreite */
-            object-fit: cover; /* Passt das Bild an, um es im Container zu halten */
             border-radius: 10px;
 
         }
@@ -293,13 +292,13 @@
         .parallax_cat2 {
             background-image: url(Fotos/placeholder.png);
             
-            height: 100%;
-            max-width: 100%;
+            height: 100vw;
+            max-width: 100vw;
     
             background-attachment: fixed;
             background-position: center;
             background-repeat: no-repeat;
-            background-size:auto;
+            background-size: cover;
         }
     
         #category2 {
@@ -325,7 +324,7 @@
             justify-content: center;
             align-items: center;
             gap: 1rem;    
-            }
+        }
         
         #img-topic1, #img-topic2, #img-topic3, #img-topic4 {
             display: flex;
