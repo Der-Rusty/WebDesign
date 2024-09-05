@@ -104,7 +104,7 @@
             font-family: quicksand;
             max-width: 100vw;
             display: flex;
-            scrollbar-width: none; /* Mögliche Werte: auto, thin, none */
+            scrollbar-width: none; /* Mögliche Werte: auto, thin, none */           
         }
     
             /* Gesamte Scrollbar */
@@ -161,7 +161,7 @@
         #TopBar {
             width: 100%;
             display: flex;
-            background-color: rgb(0, 0, 0, 0.8);
+            background-color: rgb(0, 0, 0);
             backdrop-filter: blur(20px);
             align-items: center; /* Vertikale Zentrierung aller Inhalte in der TopBar */
             padding: 0 10px; /* Optionales Padding anpassen */
@@ -187,7 +187,7 @@
             display: flex;
             align-items: center; /* Vertikale Zentrierung der Inhalte */
             flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
-            justify-content: space-between; /* Verteilung der Elemente */
+            justify-content: flex-end; /* Verteilung der Elemente */
         }
         
         .TopBarContent {
@@ -213,36 +213,81 @@
             display: block; /* Entfernt unerwünschte Leerzeichen um das Bild */
             border-radius: 5px;
         }
-        /*macht keinen sinn*/
-        .categorys {
+
+        /* Hamburger Menü */
+        .hamburger-menu {
+            width: 35px;
+            height: 30px;
             display: flex;
-            width: 40%; /* Sorgt dafür, dass das .categorys den gesamten Platz im Parent-Element (.cat) einnimmt */
-            flex: 1; /* Nimmt den restlichen verfügbaren Platz ein */
-            font-size: 1rem
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-right: 3rem;
         }
-        
-        .categorys ul {
-            display: flex;
-            justify-content: space-evenly; /* Verteilt die Kategorien gleichmäßig */
-            flex-grow: 1;
-            list-style: none;
+
+        .bar {
+            width: 100%;
+            height: 4px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Sidebar-Stile */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            right: -300px; /* Sidebar außerhalb des Bildschirms platzieren */
+            width: 40%;
+            height: 100vh;
+            background-color: rgb(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            transition: right 0.8s ease; /* Sanfte Bewegung beim Erscheinen */
+            z-index: 9999;
+            padding-top: 20%; /* Abstand zum oberen Rand */
+            color: white;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
             padding: 0;
-            margin: 0;
-            flex-wrap: wrap;
         }
-        
-        .categorys a {
-            text-align: center; /* Zentriert den Text in jedem Listenelement */
+
+        #sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        #sidebar ul li a {
             color: white;
             text-decoration: none;
-            padding: 1.8rem;
+            display: block;
+            font-size: 1.5rem;
         }
-        
-        .categorys a:hover {
-            background-color: rgb(22, 22, 22);
-            border-radius: 5px;
+
+        #sidebar ul li:hover {
+            background-color: #575757;
         }
-        
+
+        /* Sidebar sichtbar, wenn aktiv */
+        #sidebar.active {
+            right: 0; /* Sidebar in den sichtbaren Bereich verschieben */
+        }
+
+        /* Hamburger Menü bei Aktivierung (X-Symbol) */
+        .hamburger-menu.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(0px, 18px);
+        }
+
+        .hamburger-menu.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(0px, -18px);
+        }
+
+
 
     
     
