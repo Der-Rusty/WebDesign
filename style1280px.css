@@ -1,501 +1,528 @@
 @media only screen and (min-width: 1280px) {
 
-/* Standardstil ohne Animation */
-.animate-on-scroll {
-    opacity: 0;
-}
-
-/* Animation von links nach rechts */
-.animate-on-scroll-left.in-view {
-    animation: imgslideleft 1s ease-out 0s 1 normal both;
-}
-
-@keyframes imgslideleft {
-    0% {
-        transform: translateX(-100%);
+    /* Standardstil ohne Animation */
+    .animate-on-scroll {
         opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Animation von rechts nach links */
-.animate-on-scroll-right.in-view {
-    animation: imgslideright 1s ease-out 0s 1 normal both;
-}
-
-@keyframes imgslideright {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Animation von oben nach unten */
-.animate-on-scroll-top.in-view {
-    animation: imgslidetop 2s ease-out 0s 1 normal both;
-}
-
-@keyframes imgslidetop {
-    0% {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Animation von unten nach oben */
-.animate-on-scroll-bottom.in-view {
-    animation: imgslidebottom 1s ease-out 0s 1 normal both;
-}
-
-@keyframes imgslidebottom {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Fade-in Animation */
-.animate-on-scroll-fade.in-view {
-    animation: fadein 1s ease-out 1 normal both;
-}
-
-@keyframes fadein {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-
-
-/*
-animate-on-scroll animate-on-scroll-fade
-<div class="animate-on-scroll animate-on-scroll-left">Inhalt</div>
-<div class="animate-on-scroll animate-on-scroll-right">Inhalt</div>
-<div class="animate-on-scroll animate-on-scroll-top">Inhalt</div>
-<div class="animate-on-scroll animate-on-scroll-bottom">Inhalt</div>
-*/
-
-    html {
-        scroll-behavior: smooth;
     }
     
-    body {
-        margin:0;
-        background-color: rgb(22, 22, 22);
-        flex-direction: column;
-        font-family: quicksand;
-        max-width: 100vw;
-        overflow-x: hidden;
-        display: flex;
-        scrollbar-width: none; /* Mögliche Werte: auto, thin, none */
-    }
-
-        /* Gesamte Scrollbar */
-    ::-webkit-scrollbar {
-        width: 0px; /* Breite der Scrollbar */
+    /* Animation von links nach rechts */
+    .animate-on-scroll-left.in-view {
+        animation: imgslideleft 1s ease-out 0s 1 normal both;
     }
     
-
-
-
-
-    .parallax_text {
-        display: flex; /* Flexbox für das Parallax-Element */
-        justify-content: center; /* Zentriere den Text horizontal */
-        align-items: center; /* Zentriere den Text vertikal */
-        min-height: 100vh; /* Höhe des Parallax-Elements */
-        max-width: 100vw; /* Breite des Parallax-Elements */
-        background-attachment: fixed; /* Parallax-Effekt */
-        background-position: center; /* Hintergrundposition */
-        background-repeat: no-repeat; /* Kein wiederholender Hintergrund */
-        background-size: cover; /* Hintergrund auf ganze Größe skalieren */
-        position: relative; /* Stellt sicher, dass der Inhalt relativ positioniert ist */
-        text-align: center; /* Text zentrieren */
-    }
-
-    .parallax_text h1 {
-        z-index: 1; /* Stellt sicher, dass der Text vor dem Hintergrund ist */
-        font-size: 4vw; /* Anpassbare Schriftgröße */
-        padding: 2vw;
-        color: white;
-        background-color: black;
-        border-radius: 50px;
-    }
-
-
-
-
-    .parallax_cat1 {
-        background-image: url(Fotos/placeholder.png);
-        
-        height: 100vh;
-        max-width: 100vw;
-
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    
-
-
-
-    #TopBar {
-        width: 100%;
-        display: flex;
-        background-color: rgb(0, 0, 0, 0.8);
-        backdrop-filter: blur(20px);
-        align-items: center; /* Vertikale Zentrierung aller Inhalte in der TopBar */
-        padding: 0 10px; /* Optionales Padding anpassen */
-        margin: 0;
-        animation: slideinTop 01.1s ease 1 normal both;
-        z-index: 100000;
-        position: fixed;
+    @keyframes imgslideleft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
     }
     
-    @keyframes slideinTop{
+    /* Animation von rechts nach links */
+    .animate-on-scroll-right.in-view {
+        animation: imgslideright 1s ease-out 0s 1 normal both;
+    }
+    
+    @keyframes imgslideright {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    /* Animation von oben nach unten */
+    .animate-on-scroll-top.in-view {
+        animation: imgslidetop 1.5s ease-out 0s 1 normal both;
+    }
+    
+    @keyframes imgslidetop {
         0% {
             transform: translateY(-100%);
             opacity: 0;
         }
-    
         100% {
             transform: translateY(0);
             opacity: 1;
         }
     }
     
-    .TopBarElements {
-        display: flex;
-        align-items: center; /* Vertikale Zentrierung der Inhalte */
-        flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
-        justify-content: space-between; /* Verteilung der Elemente */
+    /* Animation von unten nach oben */
+    .animate-on-scroll-bottom.in-view {
+        animation: imgslidebottom 1s ease-out 0s 1 normal both;
     }
     
-    .TopBarContent {
-        display: flex;
-        align-items: center;
-        gap: 2vw; /* Abstand zwischen den Elementen */
-        flex-grow: 1; /* Erlaubt dem Container, den verfügbaren Platz einzunehmen */
+    @keyframes imgslidebottom {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
     }
     
-    #icon {
-        display: flex;
-        justify-content: center; /* Horizontale Zentrierung des Bildes */
-        align-items: center; /* Vertikale Zentrierung des Bildes */
-        height: 80px; /* Feste Höhe des Containers */
-        width: 80px; /* Feste Breite des Containers */
-        flex-shrink: 0; /* Verhindert, dass das Icon verkleinert wird */
-        padding: 2vh 2vh;
+    /* Fade-in Animation */
+    .animate-on-scroll-fade.in-view {
+        animation: fadein 2s ease-out 1 normal both;
     }
     
-    #icon img {
-        max-height: 100%; /* Skaliert das Bild relativ zur Containerhöhe */
-        max-width: 100%; /* Skaliert das Bild relativ zur Containerbreite */
-        object-fit: cover; /* Passt das Bild an, um es im Container zu halten */
-        display: block; /* Entfernt unerwünschte Leerzeichen um das Bild */
-        border-radius: 5px;
-    }
-    /*macht keinen sinn*/
-    .categorys {
-        display: flex;
-        width: 40%; /* Sorgt dafür, dass das .categorys den gesamten Platz im Parent-Element (.cat) einnimmt */
-        flex: 1; /* Nimmt den restlichen verfügbaren Platz ein */
-        font-size: 1.1vw
-    }
-    
-    .categorys ul {
-        display: flex;
-        justify-content: space-between; /* Verteilt die Kategorien gleichmäßig */
-        width: 45%; /* Nimmt den gesamten Platz innerhalb von .categorys ein */
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    
-    .categorys a {
-        text-align: center; /* Zentriert den Text in jedem Listenelement */
-        color: white;
-        text-decoration: none;
-        padding: 2.5vh;
-    }
-    
-    .categorys a:hover {
-        background-color: rgb(22, 22, 22);
-        border-radius: 5px;
-    }
-    
-    /*macht keinen sinn*/
-    .links{
-        color: white; 
-        justify-content: flex-end;
-        font-size: 2.1em;
-        margin: 0 0.7vw;
-        margin-right: 1.8vw;
-    }
-
-
-
-
-
-    #category1 {
-        display: flex;
-        padding-top: 18vw;
-        padding-bottom: 19vw;
-    }
-
-    .Cat1-Content {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        flex-grow: 1;
-    }
-    
-    #imgProfl {
-        display: flex;
-        flex-shrink: 0;
-        width: 40vh;
-        height: 40vh;
-        margin: 0 5vw;
-    }
-    
-    #imgProfl img {
-        max-height: 100%; /* Skaliert das Bild relativ zur Containerhöhe */
-        max-width: 100%; /* Skaliert das Bild relativ zur Containerbreite */
-        object-fit: cover; /* Passt das Bild an, um es im Container zu halten */
-        display: block; /* Entfernt unerwünschte Leerzeichen um das Bild */
-        border-radius: 10px;
-    }
-    
-    #imgProfr {
-        display: flex;
-        flex-shrink: 0;
-        width: 40vh;
-        height: 40vh;
-        margin: 0 5vw;        
-    }
-    
-    #imgProfr img {
-        max-height: 100%; /* Skaliert das Bild relativ zur Containerhöhe */
-        max-width: 100%; /* Skaliert das Bild relativ zur Containerbreite */
-        object-fit: cover; /* Passt das Bild an, um es im Container zu halten */
-        display: block; /* Entfernt unerwünschte Leerzeichen um das Bild */
-        border-radius: 10px;
-    }
-    
-    #text {
-        color: white;
-        text-align: center;
-        flex-grow: 1;
-        margin: 0 -1vh;
-    }
-    
-    @keyframes textslideright {
+    @keyframes fadein {
         0% {
             opacity: 0;
-            transform: translateZ(-100%);
         }
-    
         100% {
             opacity: 1;
-            transform: translateZ(0%);
         }
     }
-
-
-
-
-
-    .parallax_cat2 {
-        background-image: url(Fotos/placeholder.png);
+    
+    
+    
+    /*
+    animate-on-scroll animate-on-scroll-fade
+    <div class="animate-on-scroll animate-on-scroll-left">Inhalt</div>
+    <div class="animate-on-scroll animate-on-scroll-right">Inhalt</div>
+    <div class="animate-on-scroll animate-on-scroll-top">Inhalt</div>
+    <div class="animate-on-scroll animate-on-scroll-bottom">Inhalt</div>
+    */
+    
+        html {
+            scroll-behavior: smooth;
+        }
         
-        height: 100vh;
-        max-width: 100vw;
-
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    #category2 {
-        display: flex;
-        justify-content: space-around; 
-        align-items: center;
-        margin: 10vw;
-    }
-    
-    .Cat2-Content {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        flex-shrink: 0;
-        margin-top: 2vw;
-    }
-    
-    #left-themes, #right-themes {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        flex-shrink: 0;
-        justify-content: center;
-        align-items: center;
-        gap: 5vw;    
+        body {
+            margin:0;
+            background-color: rgb(22, 22, 22);
+            flex-direction: column;
+            font-family: quicksand;
+            max-width: 100vw;
+            display: flex;
+            scrollbar-width: none; /* Mögliche Werte: auto, thin, none */ 
+            overflow-x: hidden;          
         }
     
-    #img-topic1, #img-topic2, #img-topic3, #img-topic4 {
-        display: flex;
-        flex-grow: 1;
-        max-width: 20vw; /* Beschränke die maximale Breite der Bildcontainer */
-        max-height: 20vw; /* Beschränke die maximale Höhe der Bildcontainer */
-
-    }
-    
-    #img-topic1 img, #img-topic2 img, #img-topic3 img, #img-topic4 img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain; 
-        max-width: 100%; /* Verhindert, dass Bilder über die Containergröße hinauswachsen */
-        max-height: 100%; 
-        border-radius: 10px;
-    }
-
-    #cat2-text {
-        display: flex;
-        color: white;
-        align-items: center;
-        font-size: 8vh;
-    }
-
-
-
-
-
-    .flex-scroller {
-        display: flex;
-        justify-content: center;
-        padding-bottom: 7.5vw;
-    }
-    
-    .scroller {
-        display: flex;
-        width: 1000px; /* Breite des Scrollers */
-        height: 200px; /* Höhe des Scrollers */
-        overflow: hidden;
-        -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-        mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-    }
-    
-    .scroller__inner__right {
-        display: flex;
-        gap: 1rem; /* Abstand zwischen den Listenelementen */
-        animation: scroll__right 14s linear infinite; /* Animationsdauer angepasst */
-    }
-
-    .scroller__inner__left {
-        display: flex;
-        gap: 1rem; /* Abstand zwischen den Listenelementen */
-        animation: scroll__left 14s linear infinite; /* Animationsdauer angepasst */
-    }
-    
-    .tag-list {
-        display: flex;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        gap: 1rem;
-    }
-    
-    .tag-list li {
-        width: 200px; /* Breite der Listenelemente */
-        height: 200px; /* Höhe der Listenelemente */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #3498db;
-        border-radius: 0.5rem;
-    }
-    
-    .tag-list li img {
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 0.5rem;
-    }
-
-    @keyframes scroll__left {
-        0% {
-            transform: translateX(0); /* Startposition */
+            /* Gesamte Scrollbar */
+        ::-webkit-scrollbar {
+            width: 0px; /* Breite der Scrollbar */
         }
-        100% {
-            transform: translateX(-50%); /* Verschieben um 50% der Gesamtbreite */
+        
+    
+    
+    
+    
+        .parallax_text {
+            display: flex; /* Flexbox für das Parallax-Element */
+            justify-content: center; /* Zentriere den Text horizontal */
+            align-items: center; /* Zentriere den Text vertikal */
+            min-height: 100vh; /* Höhe des Parallax-Elements */
+            max-width: 100vw; /* Breite des Parallax-Elements */
+            background-attachment: fixed; /* Parallax-Effekt */
+            background-position: center; /* Hintergrundposition */
+            background-repeat: no-repeat; /* Kein wiederholender Hintergrund */
+            background-size: cover; /* Hintergrund auf ganze Größe skalieren */
+            position: relative; /* Stellt sicher, dass der Inhalt relativ positioniert ist */
+            text-align: center; /* Text zentrieren */
         }
-    }
-
-    @keyframes scroll__right {
-        0% {
-            transform: translateX(-50%); /* Startposition */
+    
+        .parallax_text h1 {
+            z-index: 1; /* Stellt sicher, dass der Text vor dem Hintergrund ist */
+            font-size: 4vw; /* Anpassbare Schriftgröße */
+            padding: 2vw;
+            color: white;
+            background-color: black;
+            border-radius: 50px;
         }
-        100% {
-            transform: translateX(0%); /* Verschieben um 50% der Gesamtbreite */
+    
+    
+    
+    
+        .parallax_cat1 {
+            background-image: url(Fotos/placeholder.png);
+            
+            height: 100%;
+            max-width: 100%;
+    
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
-    }
-
-
-
-
-
-    #category3 {
-        display: flex;
-        padding-top: 20vh;
-        padding-bottom: 10vh;
-    }
     
-
-
-    
-
-    #Impressum {
-        background-color: black;
-        display: flex; /* Stellt sicher, dass die Kinder-Elemente in einer Reihe angezeigt werden */
-        align-items: center; /* Zentriert die Elemente vertikal, falls erforderlich */
-        padding: 15px; /* Optional: Fügt etwas Innenabstand hinzu */
-    }
-    
-    .Impressum-text {
-        margin-bottom: 0; /* Entfernt den unteren Rand */
-        flex-grow: 1; /* Nimmt den restlichen verfügbaren Platz ein */
-        font-size: 1.1vw;
-        color: white;
-        justify-content: space-evenly; /* Verteilt die Kategorien gleichmäßig */
-        display: flex;
-        text-align: center; /* Macht sicher, dass die Textelemente in der Flexbox ausgerichtet werden */
-        align-items: center;
-    }
-    
-    #haftung a {
-        text-decoration: none;
-        color: white;
-    }
-
+        
     
     
-    }
+    
+        #TopBar {
+            width: 100%;
+            display: flex;
+            background-color: rgb(0, 0, 0);
+            backdrop-filter: blur(20px);
+            align-items: center; /* Vertikale Zentrierung aller Inhalte in der TopBar */
+            padding: 0 10px; /* Optionales Padding anpassen */
+            margin: 0;
+            animation: slideinTop 01.1s ease 1 normal both;
+            z-index: 100000;
+            position: fixed;
+        }
+        
+        @keyframes slideinTop{
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+        
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        .TopBarElements {
+            display: flex;
+            align-items: center; /* Vertikale Zentrierung der Inhalte */
+            flex-grow: 1; /* Nimmt den verfügbaren Platz ein */
+            justify-content: flex-end; /* Verteilung der Elemente */
+        }
+        
+        .TopBarContent {
+            display: flex;
+            align-items: center;
+            flex-grow: 1; /* Erlaubt dem Container, den verfügbaren Platz einzunehmen */
+        }
+        
+        #icon {
+            display: flex;
+            justify-content: center; /* Horizontale Zentrierung des Bildes */
+            align-items: center; /* Vertikale Zentrierung des Bildes */
+            height: 80px; /* Feste Höhe des Containers */
+            width: 80px; /* Feste Breite des Containers */
+            flex-shrink: 0; /* Verhindert, dass das Icon verkleinert wird */
+            padding: 2vh 1vh;
+        }
+        
+        #icon img {
+            max-height: 100%; /* Skaliert das Bild relativ zur Containerhöhe */
+            max-width: 100%; /* Skaliert das Bild relativ zur Containerbreite */
+            object-fit: cover; /* Passt das Bild an, um es im Container zu halten */
+            display: block; /* Entfernt unerwünschte Leerzeichen um das Bild */
+            border-radius: 5px;
+        }
+
+        /* Hamburger Menü */
+        .hamburger-menu {
+            width: 35px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            margin-right: 3rem;
+        }
+
+        .bar {
+            width: 100%;
+            height: 4px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Sidebar-Stile */
+        #sidebar {
+            position: fixed;
+            top: 0;
+            right: -100%; /* Sidebar außerhalb des Bildschirms platzieren */
+            width: 20%;
+            height: 100vh;
+            background-color: rgb(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            transition: right 0.8s ease; /* Sanfte Bewegung beim Erscheinen */
+            z-index: 9999;
+            padding-top: 10rem; /* Abstand zum oberen Rand */
+            color: white;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar ul li {
+            padding: 15px;
+            text-align: center;
+        }
+
+        #sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 1.5rem;
+        }
+
+        #sidebar ul li:hover {
+            background-color: #575757;
+        }
+
+        /* Sidebar sichtbar, wenn aktiv */
+        #sidebar.active {
+            right: 0; /* Sidebar in den sichtbaren Bereich verschieben */
+        }
+
+        /* Hamburger Menü bei Aktivierung (X-Symbol) */
+        .hamburger-menu.active .bar:nth-child(1) {
+            transform: rotate(45deg) translate(0px, 18px);
+        }
+
+        .hamburger-menu.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active .bar:nth-child(3) {
+            transform: rotate(-45deg) translate(0px, -18px);
+        }
+
+
+
+    
+    
+    
+    
+    
+        #category1 {
+            display: flex;
+            margin: 20rem 0;
+
+        }
+    
+        .Cat1-Content {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-grow: 1;
+        }
+        
+        #imgProfl {
+            display: flex;
+            flex-shrink: 0;
+            width: 35wv;
+            height: 35rem;
+        }
+        
+        #imgProfl img {
+            max-height: 100%; /* Skaliert das Bild relativ zur Containerhöhe */
+            max-width: 100%; /* Skaliert das Bild relativ zur Containerbreite */
+            border-radius: 10px;
+            margin-left: 7.5rem;
+        }
+
+        #text {
+            color: white;
+            flex-grow: 1;
+            margin: 0 5rem;
+            text-align: center;
+            margin-right: 7.5rem;
+        }
+    
+    
+    
+    
+
+    
+        #category2 {
+            display: flex;
+            flex-direction: column;
+            margin: 4rem 0.5rem;
+        }
+        
+        .Cat2-Content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin-top: 2vw;
+        }
+        
+        #left-themes, #right-themes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20rem;
+            margin-bottom: 10rem;
+            flex: 1; /* Ermöglicht flexibles Wachstum */
+        }
+        
+        #img-topic1, #img-topic2, #img-topic3, #img-topic4 {
+            display: flex;
+            flex-direction: column; /* Macht sicher, dass die Bilder in einer Spalte angezeigt werden */
+            max-width: 25vw;
+            max-height: 25vw;
+        }
+        
+        #img-topic1 img, #img-topic2 img, #img-topic3 img, #img-topic4 img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Oder cover, je nach Wunsch */
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 20px;
+        }
+        
+        #cat2-text {
+            display: flex;
+            flex-direction: column; /* Stellt sicher, dass der Text korrekt angezeigt wird */
+            align-items: center;
+            color: white;
+            text-align: center;
+            font-size: 5rem;
+        }
+        
+        #cat2-text p {
+            margin: 0; /* Entfernt möglichen zusätzlichen Abstand */
+            padding-bottom: 8rem;
+        }
+        
+
+        
+    
+    
+        .scrollers {
+            margin-bottom: 5rem;
+            margin-top: 5rem;
+        }
+    
+        .flex-scroller {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 7.5;
+        }
+        
+        .scroller {
+            display: flex;
+            width: 100rem; /* Breite des Scrollers */
+            height: 25rem; /* Höhe des Scrollers */
+            overflow: hidden;
+            -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+        
+        .scroller__inner__right {
+            display: flex;
+            gap: 1rem; /* Abstand zwischen den Listenelementen */
+            animation: scroll__right 18s linear infinite; /* Animationsdauer angepasst */
+        }
+    
+        .scroller__inner__left {
+            display: flex;
+            animation: scroll__left 18s linear infinite; /* Animationsdauer angepasst */
+        }
+        
+        .tag-list {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .tag-list li {
+            width: 15vw; /* Breite der Listenelemente */
+            height: 15vw; /* Höhe der Listenelemente */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #3498db;
+            border-radius: 0.5rem;
+        }
+        
+        .tag-list li img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 0.5rem;
+        }
+    
+        @keyframes scroll__left {
+            0% {
+                transform: translateX(0); /* Startposition */
+            }
+            100% {
+                transform: translateX(-50%); /* Verschieben um 50% der Gesamtbreite */
+            }
+        }
+    
+        @keyframes scroll__right {
+            0% {
+                transform: translateX(-50%); /* Startposition */
+            }
+            100% {
+                transform: translateX(0%); /* Verschieben um 50% der Gesamtbreite */
+            }
+        }
+    
+    
+    
+    
+    
+        #category3 {
+            display: flex;
+            padding-top: 20vh;
+            padding-bottom: 10vh;
+        }
+        
+    
+    
+        
+    
+        #Impressum {
+            background-color: black;
+            display: flex; /* Stellt sicher, dass die Kinder-Elemente in einer Reihe angezeigt werden */
+            align-items: center; /* Zentriert die Elemente vertikal, falls erforderlich */
+            padding: 1rem;
+            padding-top: 3rem; /* Optional: Fügt etwas Innenabstand hinzu */
+        }
+        
+        .Impressum-text {
+            margin-bottom: 0; /* Entfernt den unteren Rand */
+            flex-grow: 1; /* Nimmt den restlichen verfügbaren Platz ein */
+            font-size: 1rem;
+            color: white;
+            justify-content: space-evenly; /* Verteilt die Kategorien gleichmäßig */
+            display: flex;
+            text-align: center; /* Macht sicher, dass die Textelemente in der Flexbox ausgerichtet werden */
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        #haftung a {
+            text-decoration: none;
+            color: white;
+        }
+    
+        #impressum-link a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /*macht keinen sinn*/
+        .links{
+            display: flex;
+            color: white; 
+            padding: 1rem;
+            font-size: 2rem;
+            justify-content: center;
+            background-color: black;
+            padding-bottom: 3rem;
+        }
+
+        .links i {
+            padding: 1rem;
+        }
+        
+        
+        }
