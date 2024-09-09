@@ -247,6 +247,7 @@
             z-index: 9999;
             padding-top: 28%; /* Abstand zum oberen Rand */
             color: white;
+            opacity: 0;
         }
 
         #sidebar ul {
@@ -272,7 +273,8 @@
 
         /* Sidebar sichtbar, wenn aktiv */
         #sidebar.active {
-            right: 0; /* Sidebar in den sichtbaren Bereich verschieben */
+            right: 0;
+            opacity: 1; /* Sidebar in den sichtbaren Bereich verschieben */
         }
 
         /* Hamburger Menü bei Aktivierung (X-Symbol) */

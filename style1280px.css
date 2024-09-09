@@ -238,7 +238,7 @@
         #sidebar {
             position: fixed;
             top: 0;
-            right: -100%; /* Sidebar außerhalb des Bildschirms platzieren */
+            right: -25%; /* Sidebar außerhalb des Bildschirms platzieren */
             width: 20%;
             height: 100vh;
             background-color: rgb(0, 0, 0, 0.5);
@@ -247,6 +247,7 @@
             z-index: 9999;
             padding-top: 10rem; /* Abstand zum oberen Rand */
             color: white;
+            opacity: 0;
         }
 
         #sidebar ul {
@@ -273,6 +274,7 @@
         /* Sidebar sichtbar, wenn aktiv */
         #sidebar.active {
             right: 0; /* Sidebar in den sichtbaren Bereich verschieben */
+            opacity: 1;
         }
 
         /* Hamburger Menü bei Aktivierung (X-Symbol) */
